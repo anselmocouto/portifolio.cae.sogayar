@@ -350,10 +350,26 @@
 
 .pc-footer {
   border-top: 1px solid var(--line);
-  padding: 26px 0;
-  text-align: center;
+  padding: 26px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
   font-size: 13.5px;
   color: var(--muted);
+}
+.pc-admin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  opacity: 0.5;
+  text-decoration: none;
+  transition: opacity 0.15s, color 0.15s;
+}
+.pc-admin-link:hover {
+  opacity: 1;
+  color: var(--sub);
 }
 
 /* Detalhe do projeto */
