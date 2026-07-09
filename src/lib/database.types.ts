@@ -22,6 +22,7 @@ export interface Database {
           created_at?: string
         }
         Update: Partial<Database['public']['Tables']['categories']['Insert']>
+        Relationships: []
       }
       projects: {
         Row: {
@@ -59,6 +60,7 @@ export interface Database {
           updated_at?: string
         }
         Update: Partial<Database['public']['Tables']['projects']['Insert']>
+        Relationships: []
       }
       project_files: {
         Row: {
@@ -84,6 +86,7 @@ export interface Database {
           created_at?: string
         }
         Update: Partial<Database['public']['Tables']['project_files']['Insert']>
+        Relationships: []
       }
       site_settings: {
         Row: {
@@ -101,6 +104,7 @@ export interface Database {
         }
         Insert: Partial<Database['public']['Tables']['site_settings']['Row']> & { id: number }
         Update: Partial<Database['public']['Tables']['site_settings']['Row']>
+        Relationships: []
       }
       contact_messages: {
         Row: {
@@ -120,7 +124,20 @@ export interface Database {
           created_at?: string
         }
         Update: Partial<Database['public']['Tables']['contact_messages']['Insert']>
+        Relationships: []
       }
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      [_ in never]: never
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
     }
   }
 }
